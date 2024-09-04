@@ -21,7 +21,7 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/seuusuario/backup-postgres-storage.git
+    git clone https://github.com/danbackeres/backup-postgres-storage.git
     cd backup-postgres-storage
     ```
 
