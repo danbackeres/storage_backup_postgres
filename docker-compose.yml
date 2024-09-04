@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15.3
+    container_name: postgres-db
+    environment:
+      #POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: teste
+    volumes:
+      - ./database:/var/lib/postgresql/data
+      - ./scripts:/scripts
+    ports:
+      - "5432:5432"
+    command: bash -c "apt-get update && apt-get install nano -y cifs-utils -y && docker-entrypoint.sh postgres"
+    privileged: true
+
+  storage:
+    image: dperson/samba
+    container_name: storage-container
+    environment:
+      USERID: "1000"
+      GROUPID: "1000"
+      SAMBA_USERNAME: "userteste"
+      SAMBA_PASSWORD: "123456"
+    ports:
+      - "1139:139"
+      - "1445:445"
+    volumes:
+      - ./storage/backup:/shared/backup
+    command: "-s 'backup;/shared/backup;yes;no;yes;all;none'"
