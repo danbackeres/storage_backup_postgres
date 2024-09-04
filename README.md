@@ -8,7 +8,7 @@ Este projeto demonstra como configurar um ambiente Docker para realizar o backup
 
 Para uma explicação detalhada do processo e um passo a passo completo, confira o artigo publicado no LinkedIn:
 
-[Realizando Backup do Banco de Dados PostgreSQL para um Storage](https://github.com/danbackeres/storage_backup_postgres)
+[Realizando Backup do Banco de Dados PostgreSQL para um Storage](https://www.linkedin.com/pulse/realizando-backup-do-banco-de-dados-postgresql-para-daniel-pgyje/)
 
 ## Como Rodar o Container
 
